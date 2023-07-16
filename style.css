@@ -1,0 +1,75 @@
+.main-container{
+    min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+h2{
+    margin: 10px 0px 0px 0px;
+}
+.description,.position{
+    font-size: 12px;
+    margin: 5px;
+    opacity: 0.7;
+    font-weight: bold;
+}
+.card{
+    width:300px;
+    padding: 10px;
+    height: fit-content;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+
+.Character{
+ width: 100%;
+ height: 300px;
+ border-radius: 10px;
+ object-fit: cover;
+ object-position: center;
+}
+.social-media{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.facebook-logo,.twitter-logo,.Linkedin-logo{
+    width: 20px;
+    height: 20px;
+}
+
+.card .description,
+.card .social-media {
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.card:hover .description,
+.card:hover .social-media {
+  visibility: visible;
+  opacity: 1;
+}
+.card:hover .position {
+    display: none;
+}
+.card:hover {
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 768px) {
+    .main-container{
+       
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+}
+
